@@ -17,12 +17,6 @@ shift + alt - k : yabai -m window --swap north
 shift + alt - h : yabai -m window --swap west
 shift + alt - l : yabai -m window --swap east
 
-## move window and split
-ctrl + alt - j : yabai -m window --warp south
-ctrl + alt - k : yabai -m window --warp north
-ctrl + alt - h : yabai -m window --warp west
-ctrl + alt - l : yabai -m window --warp east
-
 ## move window to space NO.
 shift + alt - 1 : yabai -m window --space 1;
 shift + alt - 2 : yabai -m window --space 2;
@@ -47,6 +41,10 @@ alt - 7 : yabai -m space --focus 7;
 ctrl + alt - q : yabai --stop-service
 ctrl + alt - s : yabai --start-service
 ctrl + alt - r : yabai --restart-service
+
+## move window to external monitor
+shift + ctrl - left : WIN_ID=$(yabai -m query --windows --window | jq '.id'); yabai -m window --swap west; [[ ! $? == 0 ]] && (yabai -m display --focus west; yabai -m window last --insert east; yabai -m window --focus $WIN_ID; yabai -m window --display prev; yabai -m window --focus $WIN_ID);
+shift + ctrl - right : WIN_ID=$(yabai -m query --windows --window | jq '.id'); yabai -m window --swap east; [[ ! $? == 0 ]] && (yabai -m display --focus east; yabai -m window first --insert west; yabai -m window --focus $WIN_ID; yabai -m window --display next; yabai -m window --focus $WIN_ID);
 
 ## create space
 shift + alt - n : yabai -m space --create && yabai -m space --focus last
