@@ -38,5 +38,6 @@ yabai -m rule --add app="^Riot Client$" manage=off
 yabai -m rule --add app="^League of Legends$" manage=off
 
 # yabai -m signal --add event=space_changed action="sh $HOME/Documents/Code/scripts/bash/yabai_delete_empty_space.sh"
+suyabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 
 echo "yabai configuration loaded.."
