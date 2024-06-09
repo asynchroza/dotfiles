@@ -19,12 +19,9 @@ export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 export PATH="$HOME/Documents/Misc/Flutter/flutter/bin:$PATH" 
 export EDITOR="nvim" 
 
-# Allow other users to be able to use the parent brew installation 
-brewser=$(stat -f "%Su" $(which brew))
-alias brew="sudo -Hu asynchroza brew"
-
 alias hd="$EDITOR $HOME/macdotfiles/macos" 
 alias rc="$EDITOR $HOME/.zshrc"
+alias sk="cat $HOME/.skhdrc"
 
 export NVM_DIR="$HOME/.nvm" 
 
@@ -34,6 +31,7 @@ export NVM_DIR="$HOME/.nvm"
 # sst
 export PATH=/Users/asynchroza/.sst/bin:$PATH
 
+<<<<<<< Updated upstream
 PATH=~/.console-ninja/.bin:$PATH
 
 # always transfer brew ownership to current user
@@ -42,3 +40,6 @@ sudo chown -R $USER /opt/homebrew
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
   eval "$(oh-my-posh init zsh)"
 fi
+=======
+PATH=~/.console-ninja/.bin:$PATH
+>>>>>>> Stashed changes
