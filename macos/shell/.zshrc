@@ -6,8 +6,6 @@ setopt SHARE_HISTORY
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-eval "$(starship init zsh)"
-
 zstyle ':omz:update' frequency 14
 
 # Uncomment the following line if pasting URLs and other text is messed up.
@@ -35,3 +33,12 @@ export NVM_DIR="$HOME/.nvm"
 
 # sst
 export PATH=/Users/asynchroza/.sst/bin:$PATH
+
+PATH=~/.console-ninja/.bin:$PATH
+
+# always transfer brew ownership to current user
+sudo chown -R $USER /opt/homebrew
+
+if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
+  eval "$(oh-my-posh init zsh)"
+fi
