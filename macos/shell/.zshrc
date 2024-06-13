@@ -31,15 +31,5 @@ export NVM_DIR="$HOME/.nvm"
 # sst
 export PATH=/Users/asynchroza/.sst/bin:$PATH
 
-<<<<<<< Updated upstream
-PATH=~/.console-ninja/.bin:$PATH
+eval "$(starship init zsh)"
 
-# always transfer brew ownership to current user
-sudo chown -R $USER /opt/homebrew
-
-if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
-  eval "$(oh-my-posh init zsh)"
-fi
-=======
-PATH=~/.console-ninja/.bin:$PATH
->>>>>>> Stashed changes
